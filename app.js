@@ -1,5 +1,5 @@
 // selectors
-const todoInput = document.querySelector(',todo-input');
+const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
 const todoList = document.querySelector('.todo-list');
 
@@ -13,11 +13,11 @@ function addTodo(event){
     // todo div
     const todoDiv = document.createElement('div');
     todoDiv.classList.add("todo");
-    // create list item
+    // create li
     const newTodo = document.createElement('li');
     newTodo.innerText = 'hey';
     newTodo.classList.add('todo-item');
-    todoDiv.appendChild(newTodo); // sticking it inside of todoDiv, now we have a div with an li of todo-item
+    todoDiv.appendChild(newTodo); // sticking it inside of the new todoDiv, now we have a div with an li of todo-item
     // completed button, check mark button
     const completedButton = document.createElement('button');
     completedButton.innerHTML = '<i class="fas fa-check"></i>';
@@ -26,7 +26,7 @@ function addTodo(event){
     // trash button
     const trashButton = document.createElement('button');
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashButton.classList.add("complete-btn");
+    trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
     // append to list
     todoList.appendChild(todoDiv);
